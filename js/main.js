@@ -20,6 +20,7 @@
     tank: '<svg viewBox="0 0 24 24"><path d="M5 7c0-1.7 3.1-3 7-3s7 1.3 7 3v10c0 1.7-3.1 3-7 3s-7-1.3-7-3V7z M5 7c0 1.7 3.1 3 7 3s7-1.3 7-3 M9 13v4 M15 13v4"/></svg>',
     pump: '<svg viewBox="0 0 24 24"><path d="M4 20h10v-7H4v7z M14 15h4a2 2 0 0 0 2-2V8 M7 13V8a3 3 0 0 1 3-3h2 M17 5l3 3-3 3"/></svg>',
     sprinkler: '<svg viewBox="0 0 24 24"><path d="M12 22V9 M6 22h12 M12 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M12 9c-3 0-5-1.5-7-3 M12 9c3 0 5-1.5 7-3"/></svg>',
+    social: '<svg viewBox="0 0 24 24"><path d="M3 21h18 M5 21V8l7-4 7 4v13 M9 21v-5h6v5 M9 11h.01 M15 11h.01"/></svg>',
   };
 
   function icon(name) {

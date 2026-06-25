@@ -44,6 +44,7 @@ const VILLA = {
     { ikon: "tank",      ad: "300 Ton Kapasiteli Su Deposu" },
     { ikon: "pump",      ad: "Hidrofor" },
     { ikon: "sprinkler", ad: "Bahce Sulama Duzenegi" },
+    { ikon: "social",    ad: "Sosyal Tesis" },
   ],
 
   // ---- Iletisim ----
