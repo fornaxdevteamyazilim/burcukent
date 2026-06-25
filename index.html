@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satilik Villa | Burcukent</title>
+  <meta name="description" content="Burcukent sitesinde havuzlu, yesil alanli, bahceli satilik mustakil villa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__bg" id="heroBg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="badge" id="badge">SATILIK</span>
+      <h1 id="title">Villa Basligi</h1>
+      <p class="hero__subtitle" id="subtitle">Alt baslik</p>
+      <p class="hero__price" id="price">Fiyat</p>
+      <p class="hero__location" id="location"></p>
+      <a href="#galeri" class="hero__scroll" aria-label="Asagi kaydir">&#8595;</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- GALERI -->
+    <section id="galeri" class="section">
+      <h2 class="section__title">Fotograflar</h2>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- EV BILGILERI -->
+    <section id="bilgiler" class="section section--alt">
+      <h2 class="section__title">Villa Bilgileri</h2>
+      <div class="info-grid" id="infoGrid"></div>
+      <p class="description" id="description"></p>
+    </section>
+
+    <!-- SITE OLANAKLARI -->
+    <section id="olanaklar" class="section">
+      <h2 class="section__title">Site Olanaklari</h2>
+      <div class="amenities" id="amenities"></div>
+    </section>
+
+    <!-- ILETISIM -->
+    <section id="iletisim" class="section section--contact">
+      <h2 class="section__title">Iletisim</h2>
+      <p class="contact__lead">Villayi gormek veya bilgi almak icin bize ulasin.</p>
+      <div class="contact__buttons">
+        <a class="btn btn--whatsapp" id="whatsappBtn" target="_blank" rel="noopener">
+          <span class="btn__icon">&#128172;</span> WhatsApp ile yaz
+        </a>
+        <a class="btn btn--phone" id="phoneBtn">
+          <span class="btn__icon">&#128222;</span> <span id="phoneText">Telefon ile ara</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" aria-label="Kapat">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Onceki">&#10094;</button>
+    <img class="lightbox__img" id="lbImg" src="" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Sonraki">&#10095;</button>
+    <div class="lightbox__counter" id="lbCounter"></div>
+  </div>
+
+  <footer class="footer">
+    <p id="footerText">Burcukent</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

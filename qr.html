@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Kod Olustur | Villa</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #f4f7f5;
+      color: #1c2530;
+      margin: 0;
+      padding: 32px 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      max-width: 520px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(20,40,30,0.12);
+      padding: 28px;
+    }
+    h1 { font-size: 1.4rem; margin: 0 0 6px; }
+    p.sub { color: #5f6b76; margin: 0 0 22px; font-size: 0.95rem; }
+    label { font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 6px; }
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d6ddd9;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    button {
+      background: #1f8a4c;
+      color: #fff;
+      border: none;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+    button.secondary { background: #c9a24b; color: #1c1402; margin-top: 12px; }
+    #qrbox { display: flex; justify-content: center; margin: 26px 0 10px; min-height: 8px; }
+    #qrbox canvas, #qrbox img { border: 12px solid #fff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+    .hint { font-size: 0.82rem; color: #5f6b76; margin-top: 18px; line-height: 1.5; }
+    .hint code { background: #f0f3f1; padding: 1px 6px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>QR Kod Olustur</h1>
+    <p class="sub">Pankarta basacaginiz QR kodu buradan uretip indirebilirsiniz.</p>
+
+    <label for="url">Sitenizin adresi (URL)</label>
+    <input id="url" type="text" placeholder="https://kullaniciadi.github.io/burcukent/" />
+
+    <button id="gen">QR Olustur</button>
+    <button id="dl" class="secondary" style="display:none;">PNG olarak indir</button>
+
+    <div id="qrbox"></div>
+
+    <p class="hint">
+      1. Siteyi GitHub Pages'te yayinlayin.<br>
+      2. Yayinlanan adresi yukariya yapistirin (orn. <code>https://kullaniciadi.github.io/burcukent/</code>).<br>
+      3. <b>QR Olustur</b> &rarr; <b>PNG olarak indir</b> &rarr; pankarta yuksek cozunurlukte bastirin.<br>
+      4. QR altina "Villayi telefonunla tara, detaylari gor" yazmaniz onerilir.
+    </p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script>
+    const urlInput = document.getElementById("url");
+    const qrbox = document.getElementById("qrbox");
+    const dlBtn = document.getElementById("dl");
+
+    // Ayni klasordeki index.html'in tahmini adresini onceden doldur
+    try {
+      const guess = location.href.replace(/qr\.html.*$/, "");
+      if (guess.startsWith("http")) urlInput.value = guess;
+    } catch (e) {}
+
+    let canvasEl = null;
+
+    document.getElementById("gen").addEventListener("click", function () {
+      const text = urlInput.value.trim();
+      if (!text) { alert("Lutfen bir adres girin."); return; }
+      qrbox.innerHTML = "";
+      canvasEl = document.createElement("canvas");
+      QRCode.toCanvas(canvasEl, text, { width: 320, margin: 1, errorCorrectionLevel: "H" }, function (err) {
+        if (err) { alert("QR olusturulamadi: " + err); return; }
+        qrbox.appendChild(canvasEl);
+        dlBtn.style.display = "block";
+      });
+    });
+
+    dlBtn.addEventListener("click", function () {
+      if (!canvasEl) return;
+      // Yuksek cozunurluk icin buyuk bir canvas'a yeniden ciz
+      QRCode.toDataURL(urlInput.value.trim(), { width: 1200, margin: 2, errorCorrectionLevel: "H" }, function (err, dataUrl) {
+        if (err) { alert("Indirme hatasi: " + err); return; }
+        const a = document.createElement("a");
+        a.href = dataUrl;
+        a.download = "villa-qr.png";
+        a.click();
+      });
+    });
+  </script>
+</body>
+</html>
