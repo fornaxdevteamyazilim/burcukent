@@ -21,9 +21,9 @@ const VILLA = {
   // ---- Ev bilgileri (ikonlu kartlar) ----
   //  goster: false yaparsaniz o kart gizlenir.
   bilgiler: [
-    { ikon: "ruler",    etiket: "Brut Alan",    deger: "120 m2",          goster: true },
-    { ikon: "home",     etiket: "Net Alan",     deger: "180 m2",          goster: true },
-    { ikon: "bed",      etiket: "Oda Sayisi",   deger: "4+1",             goster: true },
+    { ikon: "ruler",    etiket: "Brut Alan",    deger: "140 m2",          goster: true },
+    { ikon: "home",     etiket: "Net Alan",     deger: "120 m2",          goster: true },
+    { ikon: "bed",      etiket: "Oda Sayisi",   deger: "3+1",             goster: true },
     { ikon: "villa",    etiket: "Tip",          deger: "Mustakil Villa",  goster: true },
     { ikon: "fire",     etiket: "Isitma",       deger: "Kombi (Dogalgaz)", goster: true },
     { ikon: "shield",   etiket: "Mantolama",    deger: "Var (Yalitimli)", goster: true },
