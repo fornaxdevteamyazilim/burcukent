@@ -45,6 +45,7 @@ const VILLA = {
     { ikon: "pump",      ad: "Hidrofor" },
     { ikon: "sprinkler", ad: "Bahce Sulama Duzenegi" },
     { ikon: "social",    ad: "Sosyal Tesis" },
+    { ikon: "camera",    ad: "Site Kamera Sistemi" },
   ],
 
   // ---- Iletisim ----
