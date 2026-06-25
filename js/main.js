@@ -17,6 +17,9 @@
     tree: '<svg viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-4 10 5 5 0 0 0 8 0 6 6 0 0 0-4-10z M12 14v8 M9 19h6"/></svg>',
     pool: '<svg viewBox="0 0 24 24"><path d="M2 18c2 0 2 1.5 4 1.5S10 18 12 18s2 1.5 4 1.5S18 18 20 18 M2 22c2 0 2 1.5 4 1.5 M7 16V5a2 2 0 0 1 4 0 M17 16V5a2 2 0 0 0-4 0 M7 10h6"/></svg>',
     play: '<svg viewBox="0 0 24 24"><path d="M12 4l8 4-8 4-8-4 8-4z M4 8v6c0 2 3.5 4 8 4s8-2 8-4V8 M12 12v6"/></svg>',
+    tank: '<svg viewBox="0 0 24 24"><path d="M5 7c0-1.7 3.1-3 7-3s7 1.3 7 3v10c0 1.7-3.1 3-7 3s-7-1.3-7-3V7z M5 7c0 1.7 3.1 3 7 3s7-1.3 7-3 M9 13v4 M15 13v4"/></svg>',
+    pump: '<svg viewBox="0 0 24 24"><path d="M4 20h10v-7H4v7z M14 15h4a2 2 0 0 0 2-2V8 M7 13V8a3 3 0 0 1 3-3h2 M17 5l3 3-3 3"/></svg>',
+    sprinkler: '<svg viewBox="0 0 24 24"><path d="M12 22V9 M6 22h12 M12 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M12 9c-3 0-5-1.5-7-3 M12 9c3 0 5-1.5 7-3"/></svg>',
   };
 
   function icon(name) {

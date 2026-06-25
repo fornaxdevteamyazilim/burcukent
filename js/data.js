@@ -38,9 +38,12 @@ const VILLA = {
 
   // ---- Site / sosyal olanaklar (rozetler) ----
   olanaklar: [
-    { ikon: "pool",   ad: "Yuzme Havuzu" },
-    { ikon: "tree",   ad: "Genis Yesil Alanlar" },
-    { ikon: "play",   ad: "Cocuk Oyun Alanlari" },
+    { ikon: "pool",      ad: "Yuzme Havuzu" },
+    { ikon: "tree",      ad: "Genis Yesil Alanlar" },
+    { ikon: "play",      ad: "Cocuk Oyun Alanlari" },
+    { ikon: "tank",      ad: "300 Ton Kapasiteli Su Deposu" },
+    { ikon: "pump",      ad: "Hidrofor" },
+    { ikon: "sprinkler", ad: "Bahce Sulama Duzenegi" },
   ],
 
   // ---- Iletisim ----
